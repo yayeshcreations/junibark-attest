@@ -9,8 +9,8 @@ skip-lint = false
 junibark_attest = "GLncvCsbvDHdT3844L9mhEYXAGZY1BY7mz3yBawmHFFy"
 
 [provider]
-cluster = "localnet"
-wallet = "~/.config/solana/id.json"
+cluster = "devnet"
+wallet = "/mnt/c/Users/amann/.config/solana/devnet-wallet.json"
 
 [scripts]
 test = "npx ts-mocha -p ./tsconfig.json -t 1000000 tests/**/*.ts"

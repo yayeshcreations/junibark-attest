@@ -99,3 +99,21 @@ audited, not for mainnet funds yet.
 ## License
 
 MIT. Use it in any giving platform, not only ours.
+
+## Deployment
+
+| | |
+| --- | --- |
+| Cluster | devnet |
+| Program id | `GLncvCsbvDHdT3844L9mhEYXAGZY1BY7mz3yBawmHFFy` |
+| Explorer | https://explorer.solana.com/address/GLncvCsbvDHdT3844L9mhEYXAGZY1BY7mz3yBawmHFFy?cluster=devnet |
+| First deployed | 2026-09-10, slot 496066076 |
+| Upgrade authority | `624DbdhmBDF2653AgbMbyytu44eA4gFod3kEeTyvFLoN` (a devnet-only key) |
+
+The JuniBark app talks to this program without the Anchor runtime: a small
+web3.js client pinned to this repo's IDL builds the three instructions and
+decodes the two accounts. A cause's receipt is hashed in the browser before
+upload, the cause's verified wallet signs `attest_spend`, and the server reads
+the `Attestation` PDA back before recording anything. Anyone can then download
+the original receipt, hash it, and compare against the chain from the public
+cause page.
